@@ -1,26 +1,30 @@
+@import url("https://fonts.cdnfonts.com/css/beatrice-display-trial");
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --text: #000000;
+  --secondary: #d4d4d4;
+  --text-highlight: #000e8a;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-text: var(--text);
+  --color-secondary: var(--secondary);
+  --color-text-highlight: var(--text-highlight);
+  --font-Beatrice: "Beatrice Display Trial";
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-Beatrice);
+  font-weight: 500;
+}
+h1 {
+  @apply text-4xl md:text-5xl font-bold uppercase leading-tight;
 }
